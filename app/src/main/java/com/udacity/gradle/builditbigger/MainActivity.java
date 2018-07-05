@@ -49,9 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchLibraryActivity(String jokeText){
-        Intent intent = new Intent(this, JokeDisplayActivity.class);
-        intent.putExtra(JokeDisplayActivity.JOKETEXT_KEY, jokeText);
-        startActivity(intent);
+        startActivity(new JokeDisplayActivity().jokeIntent(this, jokeText));
 
     }
 
